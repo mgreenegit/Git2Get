@@ -1,6 +1,9 @@
 # NuGet build CLI
 nuget
 *.nuspec
+bin
+Release
+*.nupkg
 
 # Windows image file caches
 Thumbs.db
