@@ -17,4 +17,5 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
   </metadata>
 </package>
 "@ | Out-File $NuSpec
+$env:PackageVersion = $moduleData.Version
 }
