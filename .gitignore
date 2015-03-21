@@ -1,8 +1,6 @@
 # NuGet build CLI
 nuget
-
-# Packages local
-packages
+*.nuspec
 
 # Windows image file caches
 Thumbs.db

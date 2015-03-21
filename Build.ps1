@@ -1,4 +1,4 @@
-$nugetExe = if(Test-Path Env:NuGet) { Get-Content env:NuGet } else { Join-Path .\ "nuget\nuget.exe" }
+$nugetExe = if($env:NuGet) { Get-Content $env:NuGet } else { Join-Path ..\ "\nuget\nuget.exe" }
 
 foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) {
     $moduleData = $dscModule | Test-ModuleManifest
@@ -19,5 +19,5 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
   </metadata>
 </package>
 "@ | Out-File $NuSpec
-    . $nugetExe pack $NuSpec -OutputDirectory .\Packages -NonInteractive -Version $($moduleData.version)
+    . $nugetExe pack $NuSpec -OutputDirectory .\bin\Release -NonInteractive -Version $($moduleData.version)
 }
