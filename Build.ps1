@@ -19,5 +19,6 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
   </metadata>
 </package>
 "@ | Out-File $NuSpec
+    mkdir .\bin\Release -ErrorAction SilentlyContinue
     . $nugetExe pack $NuSpec -OutputDirectory .\bin\Release -NonInteractive -Version $($moduleData.version)
 }
