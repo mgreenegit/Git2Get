@@ -2,7 +2,7 @@
 This repo serves to test collaborative development of PowerShell DSC modules.  The modules in this repo are functional but do not provide any real configuration management.  Their sole purpose is to validate a collaborative authoring scenario, and test build automation through [MyGet](http://MyGet.org).
 
 ## Build Script ##
-The value in this repo is the [Build.ps1][Build] file.  This script is intended to be executed inside the MyGet build environment and handles three tasks:
+The value in this repo is the [Build.ps1](./Build.ps1) file.  This script is intended to be executed inside the MyGet build environment and handles three tasks:
 
 * Identify the modules in this repo.
 * Create .NuSpec XML files for each DSC Module.  The file contains meta data that NuGet uses to create the packaged form of the module.
