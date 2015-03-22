@@ -1,5 +1,5 @@
 write-host '## BEGINNING OF PS BUILD SCRIPT ##'
-write-host "The execution environment is running in $($psversiontable.PSVersion)"
+write-host "The execution environment is running in PowerShell Version $($psversiontable.PSVersion)"
 foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) {
     $moduleData = $dscModule | Test-ModuleManifest
     $env:PackageVersion = $($moduleData.Version)
@@ -23,3 +23,4 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
 & $env:NuGet pack $NuSpec -Version $($moduleData.Version) -Noninteractive
 }
 write-host '## END OF PS BUILD SCRIPT ##'
+write-host '`n'
