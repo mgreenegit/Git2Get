@@ -1,3 +1,5 @@
+write-host '## BEGINNING OF PS BUILD SCRIPT ##'
+$psversiontable
 foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) {
     $moduleData = $dscModule | Test-ModuleManifest
     $env:PackageVersion = $($moduleData.Version)
@@ -20,3 +22,4 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
 "@ | Out-File $NuSpec
 & $env:NuGet pack $NuSpec -Version $($moduleData.Version) -Noninteractive
 }
+write-host '## END OF PS BUILD SCRIPT ##'

@@ -3,7 +3,7 @@
 	[OutputType([System.Collections.Hashtable])]
      param(
      [Parameter(Mandatory=$true)]
-     $Test
+     [string]$Test
      )
      @{Test = $true}
 }
@@ -12,7 +12,7 @@
  {
     param(
     [Parameter(Mandatory=$true)]
-    $Test
+    [string]$Test
          )
          write-verbose 'This is a test!'
 }
@@ -22,7 +22,7 @@
     [OutputType([System.Boolean])]
     param(
     [Parameter(Mandatory=$true)]
-    $Test
+    [string]$Test
          )
          $true
 }
