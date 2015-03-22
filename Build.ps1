@@ -1,8 +1,5 @@
 write-host '## BEGINNING OF PS BUILD SCRIPT ##'
 write-host "The execution environment is running in PowerShell Version $($psversiontable.PSVersion)"
-invoke-webrequest 'https://raw.githubusercontent.com/PowerShellOrg/DSC/master/Tooling/cDscResourceDesigner/cDscResourceDesigner.psm1' -OutFile "$(get-content $env:SourcesPath)\cDSCResourceDesigner.psm1"
-Import-Module "$(get-content $env:SourcesPath)\cDSCResourceDesigner.psm1"
-Get-Command Test-xDscResource
 foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) {
     $moduleData = $dscModule | Test-ModuleManifest
     $env:PackageVersion = $($moduleData.Version)
