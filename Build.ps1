@@ -18,6 +18,5 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
   </metadata>
 </package>
 "@ | Out-File $NuSpec
-$NuGet = get-content env:NuGet
-& $NuGet pack $NuSpec -Version $($moduleData.Version) -Noninteractive
+& $env:NuGet pack $NuSpec -Version $($moduleData.Version) -Noninteractive
 }
