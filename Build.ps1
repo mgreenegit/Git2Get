@@ -1,8 +1,7 @@
 foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) {
     $moduleData = $dscModule | Test-ModuleManifest
+    $env:PackageVersion = $($moduleData.Version)
     $NuSpec = Join-Path $moduleData.ModuleBase "$moduleData.nuspec"
-    set-content env:Version = $moduleData.Version
-    write-host "version is $(get-content env:Version)"
 @"
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
