@@ -15,4 +15,3 @@ The connection between MyGet and GitHub is a [Webhook](http://docs.myget.org/doc
 
 ## Consuming with PowerShellGet ##
 The modules from the test webfeed can be installed using PowerShellGet.  To configure the repository, see the following [snippet](https://gist.github.com/mgreenegit/6f2a80eacb045505648e)
-<script src="https://gist.github.com/mgreenegit/6f2a80eacb045505648e.js"></script>
