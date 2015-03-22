@@ -23,4 +23,4 @@ foreach ($dscModule in (Get-ChildItem .\ -filter *.psd1 -Recurse | % FullName)) 
 & $env:NuGet pack $NuSpec -Version $($moduleData.Version) -Noninteractive
 }
 write-host '## END OF PS BUILD SCRIPT ##'
-write-host '`n'
+write-host `n
