@@ -6,7 +6,7 @@ This repo serves to **demonstrate** collaborative development of PowerShell DSC 
 **Continuous Delivery** - This is a work in progress.  Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure after commit but before push.
 
 ## Build Script ##
-[The unique value in this repo is the Build.ps1 file. (click here)](./Build.ps1)
+[The unique value in this repo is the Build.ps1 file.](./Build.ps1)
 
 This script is intended to be executed inside the MyGet build environment and handles three tasks:
 
