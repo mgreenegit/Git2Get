@@ -1,11 +1,18 @@
 # ModuleDev
 This repo serves to **demonstrate** collaborative development of PowerShell DSC modules, and automated "build" through [MyGet](http://MyGet.org).  Build in this case refers to extracting each DSC module from a Git repo (doesn't have to be GitHub) and automating test, packaging, and publishing to a source compatible with [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  The modules in this repo are functional but do not provide any real configuration management.  Their sole purpose is to validate a scenario.
 
-**Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline as often as is needed.  Small improvements, low risk.
+***
+Adding this script to an existing set of tools helps enable processes for DSC authoring and release.
 
-**Continuous Delivery** - This is a work in progress.  Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure after commit but before push.
+**Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline often.  Small improvements, low risk.  A script does not enable this.  This repo is just part of a toolset to demonstrate support for process.
 
-## Build Script ##
+**Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.  Support for test automation is in the issue list.
+
+Module enhancements that would contribute to easily working in this toolset:
+* Include unit test scripts in each module folder
+* Author module documentation in markdown
+
+## Build Script
 [The unique value in this repo is the Build.ps1 file.](./Build.ps1)
 
 This script is intended to be executed inside the MyGet build environment and handles three tasks:
