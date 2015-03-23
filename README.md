@@ -3,7 +3,7 @@ This repo serves to **demonstrate** collaborative development of PowerShell DSC 
 
 Everything prototyped in this effort should work equally well in an on-premises Git enabled repository (such as TFS) and NuGet feed (published to IIS).  The build automation in an on-prem solution could be [Service Managagement Automation](https://technet.microsoft.com/en-us/library/dn469260.aspx), [Release Management](https://www.visualstudio.com/en-us/explore/release-management-vs.aspx), or a [Jenkins](http://jenkins-ci.org/) server plugin.
 ***
-## Concept Visual
+### Concept Visual
 *This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
 ![alt img](http://share.gifyoutube.com/KYdEk4.gif "Git 2 Get")
 ***
@@ -28,7 +28,7 @@ This script is intended to be executed inside the MyGet build environment and ha
 
 Once the build service creates the NuGet package, it automatically pushes it to the test [web feed](https://www.myget.org/F/greenenuget/Packages).
 
-## Why would someone need a Build.ps1 file? ##
+### Why would someone need a Build.ps1 file? ##
 Including the file in a project enables an automated build service including testing and packaging to release modules  for consumption from a feed.
 
 ### Webhook ###
