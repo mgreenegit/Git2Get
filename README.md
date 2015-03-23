@@ -2,7 +2,10 @@
 This repo serves to **demonstrate** collaborative development of PowerShell DSC modules, and automated "build" through [MyGet](http://MyGet.org).  Build in this case refers to extracting each DSC module from a Git repo (doesn't have to be GitHub) and automating test, packaging, and publishing to a source compatible with [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  The modules in this repo are functional but do not provide any real configuration management.  Their sole purpose is to validate a scenario.
 
 Everything prototyped in this effort should work equally well in an on-premises Git enabled repository (such as TFS) and NuGet feed (published to IIS).  The build automation in an on-prem solution could be [Service Managagement Automation](https://technet.microsoft.com/en-us/library/dn469260.aspx), [Release Management](https://www.visualstudio.com/en-us/explore/release-management-vs.aspx), or a [Jenkins](http://jenkins-ci.org/) server plugin.
-
+***
+## Concept Visual
+*This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
+![alt img](http://share.gifyoutube.com/KYdEk4.gif "Git 2 Get")
 ***
 Adding this script to an existing set of tools helps enable processes for DSC authoring and release.
 
@@ -37,6 +40,3 @@ The build script should also be compatible with [TFS Online](http://docs.myget.o
 
 ### Consuming with PowerShellGet ###
 Once the build has succeeded the packaged module files will be provided by MyGet in a NuGet package feed.  To intall the module, use [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  To configure the repository, see the following [snippet](https://gist.github.com/mgreenegit/6f2a80eacb045505648e)
-
-*This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
-![alt img](http://share.gifyoutube.com/KYdEk4.gif "Git 2 Get")
