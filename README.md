@@ -16,12 +16,15 @@ This script is intended to be executed inside the MyGet build environment and ha
 
 Once the build service creates the NuGet package, it automatically pushes it to the test [web feed](https://www.myget.org/F/greenenuget/Packages).
 
-## Webhook ##
+## Why would someone need a Build.ps1 file? ##
+Including the file in a project enables MyGet build service to automate steps to make the modules available for consumption from a feed.
+
+### Webhook ###
 The connection between MyGet and GitHub is a [Webhook](http://docs.myget.org/docs/reference/webhooks) provided by MyGet.  With the webhook enabled, GitHub makes a POST call to a web service hosted by MyGet that triggers the build action.  Configuring this is a "point and click" operation from the MyGet site.
 
 [More information on Build Service from MyGet](http://docs.myget.org/docs/reference/build-services)
 
 The build script should also be compatible with [TFS Online](http://docs.myget.org/docs/how-to/use-tfs-online-git-with-myget-build-services) if a webhook is configured to use it as a source.
 
-## Consuming with PowerShellGet ##
+### Consuming with PowerShellGet ###
 Once the build has succeeded the packaged module files will be provided by MyGet in a NuGet package feed.  To intall the module, use [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  To configure the repository, see the following [snippet](https://gist.github.com/mgreenegit/6f2a80eacb045505648e)
