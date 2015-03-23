@@ -14,7 +14,7 @@
     [Parameter(Mandatory=$true)]
     [string]$Test
          )
-         write-verbose 'This is a test.'
+         write-verbose 'This is a better test.'
 }
  
  Function Test-TargetResource
