@@ -38,5 +38,5 @@ The build script should also be compatible with [TFS Online](http://docs.myget.o
 ### Consuming with PowerShellGet ###
 Once the build has succeeded the packaged module files will be provided by MyGet in a NuGet package feed.  To intall the module, use [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  To configure the repository, see the following [snippet](https://gist.github.com/mgreenegit/6f2a80eacb045505648e)
 
-*This GIF provides a visual of the concept.  There is a time lapse, the build is not actually instant, though a release usually only takes a couple of minutes.*
+*This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
 ![alt img](http://share.gifyoutube.com/KknENR.gif "Git 2 Get")
