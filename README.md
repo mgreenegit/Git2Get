@@ -1,5 +1,5 @@
 # ModuleDev
-This repo serves to test collaborative development of PowerShell DSC modules, and automated "build" through [MyGet](http://MyGet.org).  Build in this case refers to extracting each DSC module from a Git repo (doesn't have to be GitHub) and automating test, packaging, and publishing to a source compatible with PowerShellGet.  The modules in this repo are functional but do not provide any real configuration management.  Their sole purpose is to validate a scenario.
+This repo serves to test collaborative development of PowerShell DSC modules, and automated "build" through [MyGet](http://MyGet.org).  Build in this case refers to extracting each DSC module from a Git repo (doesn't have to be GitHub) and automating test, packaging, and publishing to a source compatible with [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  The modules in this repo are functional but do not provide any real configuration management.  Their sole purpose is to validate a scenario.
 
 **Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline as often as is needed.  Small improvements, low risk.
 
