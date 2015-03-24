@@ -14,12 +14,6 @@ Adding this script to an existing set of tools helps enable processes for DSC au
 
 **Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.  Support for test automation is in the issue list.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
 
-Module enhancements that would contribute to easily working in this toolset:
-* Include unit test scripts in each module folder
-* Author module documentation in markdown
-
-Another good addition to this project would be a DSC resource that installs modules from a trusted source and repackages them for Pull Server.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
-
 ## Build Script
 [The unique value in this repo is the Build.ps1 file.](./Build.ps1)
 
@@ -46,3 +40,10 @@ The build script should also be compatible with [TFS Online](http://docs.myget.o
 
 ### Consuming with PowerShellGet ###
 Once the build has succeeded the packaged module files will be provided by MyGet in a NuGet package feed.  To intall the module, use [PowerShellGet](https://technet.microsoft.com/en-us/library/dn835097(v=wps.640).aspx).  To configure the repository, see the following [snippet](https://gist.github.com/mgreenegit/6f2a80eacb045505648e)
+
+### To Do
+Module enhancements that would contribute to easily working in this toolset:
+* Include unit test scripts in each module folder
+* Author module documentation in markdown
+
+Another good addition to this project would be a DSC resource that installs modules from a trusted source and repackages them for Pull Server.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
