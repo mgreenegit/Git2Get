@@ -33,6 +33,9 @@ Once the build service creates the NuGet package, it automatically pushes it to 
 ### Why would someone need a Build.ps1 file? ##
 Including the file in a project enables an automated build service including testing and packaging to release modules  for consumption from a feed.
 
+### Testing on your own
+To test this concept, you just need to include the Build.ps1 script in your repo and setup a Webhook from MyGet.  As soon as you push a new build in Git, MyGet should automatically trigger a build and the script should produce packages in to your NuGet feed.
+
 ### Webhook ###
 The connection between MyGet and GitHub is a [Webhook](http://docs.myget.org/docs/reference/webhooks) provided by MyGet.  With the webhook enabled, GitHub makes a POST call to a web service hosted by MyGet that triggers the build action.  Configuring this is a "point and click" operation from the MyGet site.
 
