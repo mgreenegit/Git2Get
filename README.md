@@ -26,7 +26,7 @@ This script is intended to be executed inside the MyGet build environment and ha
 Once the build service creates the NuGet package, it automatically pushes it to the test [web feed](https://www.myget.org/F/greenenuget/Packages).
 
 ### Why would someone need a Build.ps1 file? ##
-Including the file in a project enables an automated build service including testing and packaging to release modules  for consumption from a feed.
+Including the file in a project enables an automated build service including testing and packaging to release modules  for consumption from a feed using PowerShellGet.
 
 ### Testing on your own
 To test this concept, you just need to include the Build.ps1 script in your repo and setup a Webhook from MyGet.  As soon as you push a new build in Git, MyGet should automatically trigger a build and the script should produce packages in to your NuGet feed.
