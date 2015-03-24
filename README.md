@@ -5,7 +5,7 @@ Everything prototyped in this effort should work equally well in an on-premises 
 ***
 ### Concept Visual
 *This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
-![alt img](./Resources/git2get.gif "Git 2 Get")
+![alt img](https://github.com/mgreenegit/ModuleDev/blob/master/Resources/Git2Get.gif "Git 2 Get")
 ***
 ## Process
 Adding this script to an existing set of tools helps enable processes for DSC authoring and release.
