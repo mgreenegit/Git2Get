@@ -7,6 +7,7 @@ Everything prototyped in this effort should work equally well in an on-premises 
 *This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
 ![alt img](http://share.gifyoutube.com/KYdEk4.gif "Git 2 Get")
 ***
+## Process
 Adding this script to an existing set of tools helps enable processes for DSC authoring and release.
 
 **Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline often.  Small improvements, low risk.  A script does not enable this.  This repo is just part of a toolset to demonstrate support for process.
