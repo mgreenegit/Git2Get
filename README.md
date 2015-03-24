@@ -11,11 +11,13 @@ Adding this script to an existing set of tools helps enable processes for DSC au
 
 **Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline often.  Small improvements, low risk.  A script does not enable this.  This repo is just part of a toolset to demonstrate support for process.
 
-**Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.  Support for test automation is in the issue list.
+**Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.  Support for test automation is in the issue list.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
 
 Module enhancements that would contribute to easily working in this toolset:
 * Include unit test scripts in each module folder
 * Author module documentation in markdown
+
+Another good addition to this project would be a DSC resource that installs modules from a trusted source and repackages them for Pull Server.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
 
 ## Build Script
 [The unique value in this repo is the Build.ps1 file.](./Build.ps1)
