@@ -15,7 +15,7 @@ Adding this script to an existing set of tools helps enable processes for DSC au
 
 **Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.
 
-This is the goal
+This is the goal:
 ![alt img](https://github.com/mgreenegit/ModuleDev/blob/master/Resources/Cycle.png "Just Happens")
 
 ## Build Script
