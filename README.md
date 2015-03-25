@@ -6,6 +6,7 @@ Everything prototyped in this effort should work equally well in an on-premises 
 ### Concept Visual
 *This is a time lapse, the build is not actually instant though a release usually only takes a couple of minutes.*
 ![alt img](https://github.com/mgreenegit/ModuleDev/blob/master/Resources/Git2Get.gif "Git 2 Get")
+
 ***
 ## Process
 Adding this script to an existing set of tools helps enable processes for DSC authoring and release.
@@ -13,6 +14,9 @@ Adding this script to an existing set of tools helps enable processes for DSC au
 **Continuous Integration** - Multiple contributors to the repo merging their changes to the mainline often.  Small improvements, low risk.  A script does not enable this.  This repo is just part of a toolset to demonstrate support for process.
 
 **Continuous Delivery** - Right now the project only automates build.  At minimum the project would also need to include automating test of each module using [Pester](https://github.com/pester/Pester) or something like [Test-xDscResource](https://gallery.technet.microsoft.com/scriptcenter/xDscResourceDesigne-Module-22eddb29).  Additional work could include test scripts to automate module changes using VM's in Azure before a Push.
+
+This is the goal
+![alt img](https://github.com/mgreenegit/ModuleDev/blob/master/Resources/Cycle.png "Just Happens")
 
 ## Build Script
 [The unique value in this repo is the Build.ps1 file.](./Build.ps1)
