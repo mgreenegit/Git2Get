@@ -52,4 +52,4 @@ Module enhancements that would contribute to easily working in this toolset:
 * Include unit test scripts in each module folder
 * Author module documentation in markdown
 
-Another good addition to this project would be a DSC resource that installs modules from a trusted source and repackages them for Pull Server.  [Issue link](https://github.com/mgreenegit/ModuleDev/issues/2)
+Another good addition to this project would be a DSC resource that installs modules from a trusted source and repackages them for Pull Server.  [Issue link](https://github.com/mgreenegit/Git2Get/issues/3)
